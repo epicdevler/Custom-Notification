@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Custom Notifications</string>
+    <string name="channel_description">Channel Description</string>
+    <string name="channel_name">Kodecamp Channel</string>
+    <string name="notification_title_hint">Title</string>
+    <string name="notification_info_hint">content</string>
+    <string name="info_label">Click \"Generate\" to randomly generate contents about food.\n\nNote Contents will be shown as notification.</string>
+</resources>
