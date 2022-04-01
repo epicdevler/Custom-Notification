@@ -3,6 +3,7 @@ package com.epicdevler.kodcamp.two.customnotifications
 import android.app.Application
 import android.app.NotificationChannel
 import android.app.NotificationManager
+import android.graphics.Color
 import android.os.Build
 import com.epicdevler.kodcamp.two.customnotifications.utils.Constants
 import dagger.hilt.android.HiltAndroidApp
@@ -23,9 +24,12 @@ class Application : Application() {
             val channel = NotificationChannel(
                 Constants.CHANNEL_ID,
                 name,
-                NotificationManager.IMPORTANCE_DEFAULT
+                NotificationManager.IMPORTANCE_HIGH
             ).apply {
                 description = descriptionText
+                enableLights(true)
+                lightColor = Color.GREEN
+                enableVibration(true)
             }
 
             // Register the channel

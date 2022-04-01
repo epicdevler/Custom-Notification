@@ -1,5 +1,6 @@
 package com.epicdevler.kodcamp.two.customnotifications.utils.di
 
+import android.app.Notification
 import android.content.Context
 import android.widget.RemoteViews
 import androidx.core.app.NotificationCompat
@@ -12,8 +13,7 @@ import dagger.hilt.InstallIn
 import dagger.hilt.android.components.ViewModelComponent
 import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.android.scopes.ViewModelScoped
-import dagger.hilt.components.SingletonComponent
-import javax.inject.Singleton
+import javax.inject.Named
 
 
 @Module
@@ -38,18 +38,38 @@ object SingletonInject {
     @ViewModelScoped
     fun provideNotifierBuilder(
         context: Context,
-        packageName: String
+        packageName: String,
+        @Named("ExpandedNotifierView")
+        expandedNotifierView: RemoteViews,
+        @Named("CollapsedNotifierView")
+        collapsedNotifierView: RemoteViews,
     ): NotificationCompat.Builder {
         // Layouts for the custom notification
-        val notificationLayout = RemoteViews(packageName, R.layout.notification_collapsed)
-        val notificationLayoutExpanded = RemoteViews(packageName, R.layout.notification_expanded)
 
         return NotificationCompat.Builder(context, Constants.CHANNEL_ID)
             .setSmallIcon(com.google.android.material.R.drawable.abc_ic_clear_material)
             .setColor(ResourcesCompat.getColor(context.resources, R.color.purple_700, null))
             .setStyle(NotificationCompat.DecoratedCustomViewStyle())
-            .setCustomContentView(notificationLayout)
-            .setCustomBigContentView(notificationLayoutExpanded)
+            .setAutoCancel(true)
+            .setGroup(Constants.NOTIFIER_FOOD_GROUP)
+            .setPriority(NotificationCompat.PRIORITY_MAX)
+            .setDefaults(NotificationCompat.DEFAULT_ALL)
+            .setCustomContentView(collapsedNotifierView)
+            .setCustomBigContentView(expandedNotifierView)
     }
+
+    @Provides
+    @ViewModelScoped
+    @Named("ExpandedNotifierView")
+    fun provideExpandedNotifierView(
+        packageName: String,
+    ): RemoteViews = RemoteViews(packageName, R.layout.notification_expanded)
+
+    @Provides
+    @ViewModelScoped
+    @Named("CollapsedNotifierView")
+    fun provideCollapsedNotifierView(
+        packageName: String,
+    ): RemoteViews = RemoteViews(packageName, R.layout.notification_collapsed)
 
 }

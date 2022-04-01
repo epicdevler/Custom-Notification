@@ -21,7 +21,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.click.setOnClickListener {
-            viewModel.showNotification()
+            viewModel.getData()
+            binding.lottieView.playAnimation()
         }
 
 

@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="sm_guide_size">20dp</dimen>
+    <dimen name="md_guide_size">100dp</dimen>
+    <dimen name="lg_guide_size">300dp</dimen>
     <dimen name="p_16">16dp</dimen>
 </resources>

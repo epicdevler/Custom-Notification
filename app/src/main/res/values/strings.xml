@@ -1,8 +1,19 @@
 <resources>
     <string name="app_name">Custom Notifications</string>
-    <string name="channel_description">Channel Description</string>
+    <string name="channel_description">Food Notifier</string>
     <string name="channel_name">Kodecamp Channel</string>
     <string name="notification_title_hint">Title</string>
     <string name="notification_info_hint">content</string>
-    <string name="info_label">Click \"Generate\" to randomly generate contents about food.\n\nNote Contents will be shown as notification.</string>
+    <string name="info_label">Click \"Generate\" to randomly generate contents about food.\n\nNote: Contents will be shown as notification.</string>
+    
+    
+    
+    
+<!--    QUOTES-->
+    <string name="adam_walfelt">Food is symbolic of love when words are inadequate</string>
+    <string name="dolly_parton">My weaknesses have always been food and men - in that order.</string>
+    <string name="ernestine_ulmer">Life is uncertain. Eat dessert first.</string>
+    <string name="miss_piggy">Never eat more than you can life.</string>
+    <string name="thomas_keller">A recipe has no soul. You, as the cook, must bring soul to the recipe.</string>
+    <string name="winona_laduke">Food for us comes from our relatives, wheter they have wings or fins or roots. That is how we consider food. Food has a culture. It has a history. It has a story. It has relationships.</string>
 </resources>

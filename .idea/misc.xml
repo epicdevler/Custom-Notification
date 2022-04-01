@@ -3,8 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/src/Learning/Android/CustomNotifications/app/src/main/res/layout/activity_main.xml" value="0.2667806755023514" />
+        <entry key="..\:/src/Learning/Android/CustomNotifications/app/src/main/res/layout-land/activity_main.xml" value="0.27291666666666664" />
+        <entry key="..\:/src/Learning/Android/CustomNotifications/app/src/main/res/layout-sw600dp/activity_main.xml" value="0.16805555555555557" />
+        <entry key="..\:/src/Learning/Android/CustomNotifications/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/src/Learning/Android/CustomNotifications/app/src/main/res/layout/notificaion_collapsed.xml" value="0.2783240701154339" />
+        <entry key="..\:/src/Learning/Android/CustomNotifications/app/src/main/res/layout/notification_collapsed.xml" value="0.2783240701154339" />
         <entry key="..\:/src/Learning/Android/CustomNotifications/app/src/main/res/layout/notification_expanded.xml" value="0.2783240701154339" />
       </map>
     </option>
@@ -14,5 +17,12 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.1" />
+      </ProjectState>
+    </option>
   </component>
 </project>
