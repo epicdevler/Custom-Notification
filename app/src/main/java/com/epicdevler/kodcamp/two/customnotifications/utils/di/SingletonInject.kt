@@ -47,12 +47,11 @@ object SingletonInject {
         // Layouts for the custom notification
 
         return NotificationCompat.Builder(context, Constants.CHANNEL_ID)
-            .setSmallIcon(com.google.android.material.R.drawable.abc_ic_clear_material)
+            .setSmallIcon(R.drawable.ic_launcher_foreground)
             .setColor(ResourcesCompat.getColor(context.resources, R.color.purple_700, null))
             .setStyle(NotificationCompat.DecoratedCustomViewStyle())
             .setAutoCancel(true)
-            .setGroup(Constants.NOTIFIER_FOOD_GROUP)
-            .setPriority(NotificationCompat.PRIORITY_MAX)
+            .setPriority(NotificationCompat.PRIORITY_DEFAULT)
             .setDefaults(NotificationCompat.DEFAULT_ALL)
             .setCustomContentView(collapsedNotifierView)
             .setCustomBigContentView(expandedNotifierView)
